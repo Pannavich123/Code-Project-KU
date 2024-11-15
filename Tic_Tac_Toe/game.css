@@ -1,0 +1,163 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #5db8f1, #e0f7fa);
+}
+
+/* Container for the game */
+.game-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Mode selection buttons */
+.mode-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.mode {
+  padding: 12px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 45%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.mode:hover {
+  background-color: #45a049;
+}
+
+.mode:active {
+  transform: scale(0.98);
+}
+
+/* Scoreboard */
+.scoreboard {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Game Board */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  font-size: 2.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+.cell.clicked {
+  animation: clickEffect 0.2s ease;
+}
+
+/* Winner text */
+.winner {
+  font-size: 1.5em;
+  color: #2ecc71;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Reset Button */
+.reset {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.reset:hover {
+  background-color: #c0392b;
+}
+
+.reset:active {
+  transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+    background-color: #f0f0f0;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #b7e5e5;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #f0f0f0;
+  }
+}
+
+/* Winner cell styles */
+.winning-cell {
+  background-color: rgba(255, 165, 0, 0.6); /* Orange with transparency */
+  font-weight: bold;
+  color: white;
+}

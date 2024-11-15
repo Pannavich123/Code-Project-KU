@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XO Game with Animation</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1 class="title">XO Game with Animation</h1>
+
+    <!-- Game Mode Selection -->
+    <div class="mode-selection">
+      <button class="mode" id="playerMode">2 Players</button>
+      <button class="mode" id="aiMode">Player vs AI</button>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <p id="score">Player X: 0 | Player O: 0</p>
+    </div>
+
+    <!-- Game Board -->
+    <div class="board" id="board" style="display: none;"></div>
+
+    <!-- Winner Display -->
+    <p class="winner" id="winner"></p>
+
+    <!-- Reset Game Button -->
+    <button class="reset" id="reset" style="display: none;">Reset Game</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
